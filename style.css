@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #324a51;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 6rem;
+}
+
+header .container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.7rem 1rem;
+}
+
+header .container img {
+  width: 2.5rem;
+}
+
+header .container h3 {
+  font-family: "Poppins", sans-serif;
+  margin-left: 1rem;
+  color: white;
+  line-height: 2rem;
+}
+
+header .container #logo-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  color: #efd1be;
+  margin-left: 1rem;
+}
+
+header .container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .navbar a:hover,
+header .container .navbar .active {
+  background: #95b0b7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#hero-section {
+  background-image: url("./images/home-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#hero-section label {
+  display: block;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 80%;
+  height: 75vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#hero-section label :checked + .flip-card {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+#hero-section label:hover .flip-card {
+  -webkit-transform: rotateX(2deg);
+          transform: rotateX(2deg);
+  -webkit-box-shadow: 0 20px 20px rgba(50, 60, 60, 0.2);
+          box-shadow: 0 20px 20px rgba(50, 60, 60, 0.2);
+}
+
+#hero-section label:hover :checked + .flip-card {
+  -webkit-transform: rotateX(175deg);
+          transform: rotateX(175deg);
+  -webkit-box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+}
+
+#hero-section label input {
+  display: none;
+}
+
+#hero-section label .flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+#hero-section label .flip-card .front,
+#hero-section label .flip-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(50, 74, 81, 0.7);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 0 20px 0 20px;
+}
+
+#hero-section label .flip-card .front .container {
+  margin-top: 8vh;
+}
+
+#hero-section label .flip-card .back {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  color: #fff;
+  background: rgba(50, 74, 81, 0.7);
+}
+
+#hero-section label .front h1,
+#hero-section label .front h2,
+#hero-section label .front h3,
+#hero-section label .back h3 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  line-height: 1.3em;
+}
+
+#hero-section label .front h1 {
+  font-size: 4.3em;
+}
+
+#hero-section label .front h2 {
+  font-size: 3em;
+  font-weight: normal;
+}
+
+#hero-section label .front h3,
+#hero-section label .back h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 1em;
+  color: #efd1be;
+}
+
+#hero-section label .back h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 2.5em 2em;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  line-height: 2em;
+  text-align: center;
+}
+
+#unity-section {
+  position: relative;
+  height: 100vh;
+  background-image: url("./images/unity-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+#unity-section .white {
+  color: white;
+  background: #95b0b7;
+}
+
+#unity-section img {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 7.8rem;
+  top: 4.8rem;
+  width: 6.5em;
+}
+
+#unity-section .pinoy,
+#unity-section .american {
+  margin-top: 1.3rem;
+}
+
+#unity-section .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+  width: 90%;
+  margin-inline: auto;
+}
+
+#unity-section .container .box {
+  background: #262626;
+  margin-top: 6rem;
+  padding-block: 4rem 1rem;
+}
+
+#unity-section .container .box p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15em;
+  color: white;
+  margin-inline: 1.2em;
+  text-align: center;
+}
+
+#profile {
+  position: relative;
+  height: 100vh;
+  background-image: url("./images/profile-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#profile .title {
+  background: #efd1be;
+}
+
+#profile .container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+#profile .container img {
+  position: absolute;
+  width: 10rem;
+  border-radius: 50%;
+  border: 3px #324a51 solid;
+  top: -6.3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#profile .container .profile-card {
+  position: relative;
+  background: #324a51;
+  margin-top: 22vh;
+  padding-block: 5rem 2rem;
+}
+
+#profile .container .profile-card .container h3 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  line-height: 2.3em;
+}
+
+#profile .container .profile-card .container span {
+  color: #efd1be;
+}
+/*# sourceMappingURL=style.css.map */

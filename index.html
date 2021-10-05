@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Austin's Slogan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="script" href="">
+</head>
+<body>
+  <div class="big-container">
+  <header>
+    <div class="container">
+    <a id="logo-link" href="#hero-section"><img id="logo-img" src="images/logo.png" alt="logo"><h2 id="logo-name">AUSTIN FLORES</h2></a>
+    <div class="navbar" id="nav-container">
+    <a class="nav active" href="#hero-section"><img src="images/home.png" alt="profile icon"><h3>HOME</h3></a>
+    <a class="nav" href="#unity-section"><img src="images/unity.png" alt="unity sybmol"><h3>UNITY EXISTS</h3></a>
+    <a class="nav" href="#profile"><img src="images/profile.png" alt="profile icon"><h3>PROFILE</h3></a>
+  </div>
+  </div>
+  </header>
+
+  <section id="hero-section">
+  <div class="slogan">
+    <div class="container">
+      
+    </div>
+  </div>
+
+  <label>
+    <input type="checkbox" />
+    <div class="flip-card">
+      <div class="front">
+        <div class="container">
+        <h1>It's a glorious thing to be one, to be bonded.<br></h1>
+      <h2>But isn't it more glorious to recognize one's right to be different?</h2>
+      <h3>Click to flip</h3>
+      </div>
+    </div>
+      <div class="back">
+        <h2>The slogan tells us that sharing societies and qualities practically speaking isn't the fundamental explanation of giving admiration and love to other local area's practices and method of living, but for us to know that acceptance and understanding is the key to unity despite the diversity.</h2>
+        <h3>Click to flip</h3>
+      </div>
+    </div>
+  </label>
+</section>
+
+  <section id="unity-section">
+    <h2 class="title white">UNITY EXISTS!</h2>
+    <div class="container">
+    <article class="box">
+      <img src="images/unity-section/indian-final.png" alt="Indian girl">
+      <p>Mahatma Gandhi sacrificed his life for communal unity. Though, there are different communities like Bengalis, Gujaratis, Punjabis,  Tamilians, etc. the facts remain that despite divisions and differences, we have lived together for thousands of years. Hindu festivals such as Diwali, Durga puja, etc. this describes the majority of unity among the Hindus and the Muslims in India.</p>
+    </article>
+    <article class="box">
+      <img class="pinoy" src="images/unity-section/pinoy-final.png" alt="Filipino boy">
+      <p>“Pakikisama” is a basic tendency for Filipinos, and is expressed in their private lives, their public workplaces, and in their relationship with their neighbors. In a democratic country that has freedom of speech, people do rallies and protests about some particular issues, and those people who participate have goals in common that gather them to be more powerful.</p>
+    </article>
+    <article class="box">
+      <img class="american" src="images/unity-section/american-final.png" alt="American boy">
+      <p>America has always sought to help immigrants incorporate their unique values and culture into the melting pot that is America. Becoming American has nothing to do with birth, ancestry or ethnic identity; it is a state of mind, heart and beliefs. America has endured much over its history. Yet it has always drawn together, and it always will, provided we never lose sight of our founding principles.</p>
+    </article>
+  </div>
+  </section>
+
+  <section id="profile">
+    <h2 class="title">AUSTIN'S PROFILE</h2>
+    <div class="container">
+    <div class="profile-card">
+    <img src="images/profile-photo.jpg" alt="Austin's Photo">
+    <div class="container">
+    <h3><span>FULL NAME : </span>AUSTIN TERRENCE B. FLORES</h3>
+    <h3><span>AGE : </span>17</h3>
+    <h3><span>HOBBIES : </span>VOLLEYBAL, PLAYING VIDEO GAMES, COMPUTER PROGRAMMING, DRAWING</h3>
+    <h3><span>RELIGION : </span>CATHOLIC</h3>
+    <h3><span>MOTTO : </span>“YOU CAN’T WIN AT EVERYTHING BUT YOU CAN TRY”</h3>
+  </div>
+  </div>
+</div>
+  </section>
+</div>
+</body>
+
+<script>
+  let btnContainer = document.getElementById("nav-container");
+  let btns = btnContainer.getElementsByClassName("nav");
+  
+  for(let i=0;i<btns.length;i++){
+    btns[i].addEventListener('click', function(){
+      let current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active");
+      this.className += " active";
+    })
+  }
+</script>
+</html>
